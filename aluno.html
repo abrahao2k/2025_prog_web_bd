@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form method="post" action="aluno_inserir.php">
+
+<div class="rendered-form">
+    <div class="formbuilder-text form-group field-nome">
+        <label for="nome" class="formbuilder-text-label">Nome:<span class="formbuilder-required">*</span></label>
+        <input type="text" class="form-control" name="nome" access="false" maxlength="60" id="nome" required="required" aria-required="true">
+    </div>
+    <div class="formbuilder-select form-group field-curso">
+        <label for="curso" class="formbuilder-select-label">Curso:</label>
+        <select class="form-control" name="curso" id="curso">
+            <option value="Informática" selected="true" id="curso-0">Informática</option>
+            <option value="Eletrotécnica" id="curso-1">Eletrotécnica</option>
+            <option value="Edificações" id="curso-2">Edificações</option>
+            <option value="Mecânica" id="curso-3">Mecânica</option>
+        </select>
+    </div>
+    <div class="formbuilder-radio-group form-group field-turno">
+        <label for="turno" class="formbuilder-radio-group-label">Turno:</label>
+        <div class="radio-group">
+            <div class="formbuilder-radio-inline">
+                <input name="turno" access="false" id="turno-0" value="Manhã" type="radio" checked="checked">
+                <label for="turno-0">Manhã</label>
+            </div>
+            <div class="formbuilder-radio-inline">
+                <input name="turno" access="false" id="turno-1" value="Tarde" type="radio">
+                <label for="turno-1">Tarde</label>
+            </div>
+            <div class="formbuilder-radio-inline">
+                <input name="turno" access="false" id="turno-2" value="Noite" type="radio">
+                <label for="turno-2">Noite</label>
+            </div>
+        </div>
+    </div>
+    <div class="formbuilder-checkbox-group form-group field-extras">
+        <label for="extras" class="formbuilder-checkbox-group-label">Extras:</label>
+        <div class="checkbox-group">
+            <div class="formbuilder-checkbox-inline">
+                <input name="bolsista" access="false" id="extras-0" value="sim" type="checkbox">
+                <label for="extras-0">Bolsista</label>
+            </div>
+            <div class="formbuilder-checkbox-inline">
+                <input name="atleta" access="false" id="extras-1" value="sim" type="checkbox">
+                <label for="extras-1">Atleta</label>
+            </div>
+        </div>
+    </div>
+    <div class="formbuilder-textarea form-group field-observacao">
+        <label for="observacao" class="formbuilder-textarea-label">Observação:</label>
+        <textarea type="textarea" class="form-control" name="observacao" access="false" id="observacao"></textarea>
+    </div>
+	
+	<button type="submit" class="btn-default btn" name="salvar" value="Salvar" 
+	access="false" style="default" id="salvar">Salvar</button>
+
+	</div>
+	
+</form>
+
+</body>
+</html>

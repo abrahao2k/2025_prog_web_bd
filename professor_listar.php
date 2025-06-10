@@ -2,6 +2,21 @@
 	<head>
 		<meta charset="UTF-8">
 	</head>
+	
+	
+	<script>
+		function excluir(cod){
+			let resposta = confirm("Excluir o registro?");
+	
+			if(resposta){
+				window.location.href="professor_excluir.php?cod=" + cod;
+			}else{
+				alert("Nada foi excluído.");
+			}
+		}
+		
+	</script>
+	
 
 	<body>
 
@@ -25,6 +40,13 @@
 					echo "Código: " . $linha['codigo'] . "<br/>";
 					echo "Nome: " . $linha['nome'] . "<br/>";
 					echo "Formação: " . $linha['formacao'] . "<br/>";
+					
+					echo "<a href='#' onClick='excluir(" . $linha['codigo'] 
+					. ")'>Excluir</a><br/>";
+					
+					echo "<a href='professor_alterar.php?cod=" . $linha['codigo'] .
+					"'>Alterar</a><br/>";
+					
 					echo "<hr>";
 				}#fim-while
 
